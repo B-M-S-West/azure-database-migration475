@@ -17,3 +17,10 @@ Milestone 3
 5. Data migration completed to the Azure database from the local database
 
 Milestone 4
+1. Created a backup file of my database on the local VM machine
+2. Uploaded this file to blob storage on Microsoft Azure
+3. Created the new VM for the development environment and restored the database to this.
+4. In SSMS created an automated backup to run weekly on a Sunday at 12:00AM
+
+Milestone 5
+1.
