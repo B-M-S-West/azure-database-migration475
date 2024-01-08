@@ -23,4 +23,20 @@ Milestone 4
 4. In SSMS created an automated backup to run weekly on a Sunday at 12:00AM
 
 Milestone 5
-1.
+1. Mimic dataloss in a production environment. To replcate the dataloss I deleteded the following two tables from the production environment:
+  1 - Person.PersonPhone
+   2 - Sales.PersonCreditCard
+2. Using Azure Data Studio restored the version from the most recent backup. Check this to see that it contained the tables that were missing as a result of the dataloss
+
+Milestone 6
+1. Created a secondary server in a different geographical location from the previous one
+2. Then set this up as a geo-replication for the production Azure SQL Database
+3. Created the failover to the secondary server with different geographical location
+4. Tested the failover and the role of the servers successfully swapped
+5. Performed a failback and the returned to their original roles.
+
+Milestone 7
+1. Went into the securtiy settings of the primary server and set up myself as an admin
+2. Created a new user account in Microsoft Entra ID
+3. Using the admin credentials then assigned the db_datareader role to the newly created user
+4. Tested out the new permissions to check the user could only read from the database and not make any changes
