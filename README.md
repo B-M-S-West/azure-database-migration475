@@ -79,5 +79,7 @@ The db_datareader is a role that allows the used to view the database and all th
 
 4. Tested out the new permissions to check the user could only read from the database and not make any changes
 
+
+Azure Database Migration Diagram
 ![image](https://github.com/B-M-S-West/azure-database-migration475/assets/144233589/cf5b58b0-0145-461f-a9b3-4c1b053e67e9)
 
