@@ -1,14 +1,14 @@
 # azure-database-migration475
-Contents
-- Project Overview
-- Project Description
+## Contents
+### - Project Overview
+### - Project Description
 
 # Project Overview
 The following README is a description of an implementaion of a database migration using the various tools and sotwares provided by the Microsoft Azure cloud computing services
 
 Such tools provide end-users ease of use and highly documented advanced tooling and are a focal point of the following description.
 
-Project Description
+# Project Description
 Milestone 2
 1. Provisioned a Windows Virtual Machine using Microsoft Azure
 The first step in this project, involved the migration of a database from an on-site system to using Azure cloud computing services and to use these services to set up a vm.
