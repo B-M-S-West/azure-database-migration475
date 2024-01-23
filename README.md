@@ -9,7 +9,7 @@ The following README is a description of an implementaion of a database migratio
 Such tools provide end-users ease of use and highly documented advanced tooling and are a focal point of the following description.
 
 # Project Description
-Milestone 2
+### Set up the Production Environment
 1. Provisioned a Windows Virtual Machine using Microsoft Azure
 The first step in this project, involved the migration of a database from an on-site system to using Azure cloud computing services and to use these services to set up a vm.
 
@@ -24,7 +24,7 @@ SQL Server Management Studio (SSMS) is a database management tools developed by 
 These tools are vital for database management and migration using Azure Cloud Services.
 5. Production Database 'AdventureWorks2022' set up from the backup file provided.
 
-Milestone 3
+### Migrate to Azure SQL Database
 1. Set up an Azure SQL database with the name 'AdventureWorks2022' ready for migration
 Using the Azure portal a Azure SQL database can be created by selecting the Azure SQL database resource from the create a resource option from the home portal. A linked SQL server can be generated and SQL login is chosen for the authentication method. Firewall settings are updated so that on the SQL database so that the VM IP address is added to the new server.
 
@@ -39,7 +39,7 @@ Once  installed schema comparison/migration is started on the vm hosted database
 Once the schema is migrated it is then simple to transfer all the appropriate data across. Data validation then takes place through checking and comparing a number of tables in each database to make sure there has been no loss in the transfer.
 ![image](https://github.com/B-M-S-West/azure-database-migration475/assets/144233589/94615e4f-d0ea-481d-a81b-f740c8903712)
 
-Milestone 4
+### Database Backup and Restore
 1. Created a backup file of my database on the local VM machine
 The database can be backed to a .bak file using SSMS. This was achieved by selecting the Adventure works database stored on the Azure vm and selecting to create a full restore backup.
 ![image](https://github.com/B-M-S-West/azure-database-migration475/assets/144233589/d9006929-f65d-45fd-9180-52138733c2b3)
@@ -50,7 +50,7 @@ Blob storage is Azure Cloud Based. It allows for storage of a large amount of da
 A development area is incredibly useful for trying anything new before deploying to a production environment. This was created by following the steps of how the other environment was created.
 5. In SSMS created an automated backup to run weekly on a Sunday at 12:00AM
 
-Milestone 5
+### Disaster Recovery Simulation
 1. Mimic dataloss in a production environment. To replicate the dataloss I deleted the following two tables from the production environment:
   1 - Person.PersonPhone
    2 - Sales.PersonCreditCard
@@ -59,7 +59,7 @@ Azure SQL Database provides three high availability architectural models: Remote
 2. Using Azure Data Studio restored the version from the most recent backup. Check this to see that it contained the tables that were missing as a result of the dataloss
 Recovery of the data was achieved by using azure portal and selecting the Azure Sql database resource. From the databases homepage I selected the Restore option. This opens the Restore database window. Where I selcted to restore the dabase to two hours before as restore point. Finally a name has to be given to the the database which for this project was adventureworksreplica.
 
-Milestone 6
+### Geo Replicatiion and Failover
 1. Created a secondary server in a different geographical location from the previous one
 I chose East US as the region for this secondary server that replicates the original settings of my original server. This allows there to be a powerful disaster recovery feature should something happen in one of the locations.
 ![image](https://github.com/B-M-S-West/azure-database-migration475/assets/144233589/e33774f8-7415-465d-9b30-627cb9a9d90d)
@@ -70,7 +70,7 @@ I chose East US as the region for this secondary server that replicates the orig
 6. Performed a failback and the returned to their original roles.
 It is important to test the system using a failover (Switching the workload from primary region to the secondary) and then tailback (the opposite direction)
 
-Milestone 7
+### Microsoft Entra Directory Integration
 1. Went into the securtiy settings of the primary server and set up myself as an admin
 2. Created a new user account in Microsoft Entra ID
 3. Using the admin credentials then assigned the db_datareader role to the newly created user
