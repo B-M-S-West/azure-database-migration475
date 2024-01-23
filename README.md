@@ -3,7 +3,7 @@ Contents
 - Project Overview
 - Project Description
 
-Project Overview
+# Project Overview
 The following README is a description of an implementaion of a database migration using the various tools and sotwares provided by the Microsoft Azure cloud computing services
 
 Such tools provide end-users ease of use and highly documented advanced tooling and are a focal point of the following description.
